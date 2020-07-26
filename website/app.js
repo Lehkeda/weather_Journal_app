@@ -6,19 +6,19 @@ let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
 const button = document.getElementById('generate');
 button.addEventListener('click', function(e){
     e.preventDefault();
-    
+
     // get user data
-    let user_data=[];
-    user_data.push({
+    let user_data;
+    user_data = {
         'zip' : document.querySelector('#zip').value,
         'feelings' : document.querySelector('#feelings').value 
-    });
+    };
     console.log(user_data)
     send_data(user_data);
 });
 
 const send_data = async (data) => {
-    const request = await fetch('/send_data',{
+    let request = await fetch('/send_data',{
         method: 'POST', 
         credentials: 'same-origin',
         headers: {
