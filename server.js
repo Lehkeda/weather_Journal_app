@@ -23,6 +23,7 @@ const server = app.listen(8000, function(){
 })
 
 app.post('/send_data', function(req, res){
-   res.send({"hey! ":req.body}); 
-   console.log('sadasdasdsd');
+    let user_data=[];
+    user_data.push(req.body)
+    console.log('We recieved user data \n' + JSON.stringify(user_data));
 });
