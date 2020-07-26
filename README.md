@@ -1,10 +1,44 @@
+
 # Weather-Journal App Project
 
-## Overview
-This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
+  
+
+## Table of Contents
+
+*  [Description](#discription)
+
+*  [Features](#features)
+
+*  [Instructions](#instructions)
+
+*  [Credits](#credits)
+
+  
+
+## Description
+
+Weather-Journal App Project is a landing page for udacity web development program
+
+  
+
+## Features
+
+* Get real-time weather data from openweathermap
+
+  
 
 ## Instructions
-This will require modifying the `server.js` file and the `website/app.js` file. You can see `index.html` for element references, and once you are finished with the project steps, you can use `style.css` to style your application to customized perfection.
+1. Clone this repository using `git clone https://github.com/Lehkeda/weather_Journal_app`
 
-## Extras
-If you are interested in testing your code as you go, you can use `tests.js` as a template for writing and running some basic tests for your code.
+2. Run `npm install`
+
+3. Run `node server.js`
+
+4. Visit `localhost:8000`
+
+  
+
+## Credits
+
+https://openweathermap.org
+https://stackedit.io
