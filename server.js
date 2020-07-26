@@ -30,19 +30,18 @@ app.post('/send_data', function(req, res){
     user_data.push(req.body)
     console.log('We recieved user data \n' + JSON.stringify(user_data));
 
-    console.log(user_data[0].zip)
-    let weather_data = get_weather_data(user_data[0].zip);
-    console.log("we got the weather data \n" + JSON.stringify(weather_data));
+    let weather_data = get_weather_data(user_data[0].zip).then(function (data){
+        console.log("we got the weather data \n" + JSON.stringify(data));
+        res.send(data);
+    });;
 });
 
 let get_weather_data = async (zip) => {
-    console.log(api_url + zip + api_key);
     let request = await fetch(api_url + zip + api_key);
     try{
         let data = await request.json();
-        console.log(data);
         return data;
     }catch(error){
         console.log("error" + error);
     }
-}
+};
