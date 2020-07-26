@@ -32,7 +32,12 @@ app.post('/send_data', function(req, res){
 
     let weather_data = get_weather_data(user_data[0].zip).then(function (data){
         console.log("we got the weather data \n" + JSON.stringify(data));
-        res.send(data);
+        let message = {
+            'feelings': user_data[0].feelings,
+            'temprature': data.main.temp,
+            'weather' : data.weather[0].description,
+        }
+        res.send(message);
     });;
 });
 
